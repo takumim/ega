@@ -214,6 +214,35 @@ For $S$ to be integral, it is necessary and sufficient for $S_0$ to be integral 
 \subsection{Rings of fractions of a graded ring}
 \label{subsection:2.2.2}
 
+\begin{env}[2.2.1]
+\label{2.2.2.1}
+Let $S$ be a graded ring, in positive degrees, $f$ a \emph{homogeneous} element of $S$, of degree $d>0$;
+then the ring of fractions $S'=S_f$ is graded, taking for $S_n'$ the set of the $x/f^k$, where $x\in S_{n+kd}$ with $k\geq 0$ (we observe here that $n$ can take arbitrary negative values);
+we denote the subring $S_0'=(S_f)_0$ of $S'$ consisting of elements \emph{of degree $0$} by the notation $S_{(f)}$.
+
+If $f\in S_d$, then the monomials $(f/1)^h$ in $S_f$ ($h$ a positive or negative integer) form a \emph{free system} over the ring $S_{(f)}$, and the set of their linear combinations is none other than
+\oldpage[II]{24}
+the ring $(S^{(d)})_f$, which is thus \emph{isomorphic to $S_{(f)}[T,T^{-1}]=S_{(f)}\otimes_\bb{Z}\bb{Z}[T,T^{-1}]$} (where $T$ is an indeterminate).
+Indeed, if we have a relation $\sum_{h=-a}^b z_h(f/1)^h=0$ with $z_h=x_h/f^m$, where the $x_h$ are in $S_{md}$, then this relation is equivalent by definition to the existence of a $k>-a$ such that $\sum_{h=-a}^b f^{h+k}x_h=0$, and as the degrees of the terms of this sum are distinct, we have $f^{h+k}x_h=0$ for all $h$, hence $z_h=0$ for all $h$.
+
+If $M$ is a graded $S$-module, then $M'=M_f$ is a graded $S_f$-module, $M_n'$ being the set of the $z/f^k$ with $z\in M_{n+kd}$ ($k\geq 0$);
+we denote by $M_{(f)}$ the set of the homomogenous elements of degree $0$ of $M'$;
+it is immediate that $M_{(f)}$ is an $S_{(f)}$-module and that we have $(M^{(d)})_f=M_{(f)}\otimes_{S_{(f)}}(S^{(d)})_f$.
+\end{env}
+
+\begin{lemma}[2.2.2]
+\label{2.2.2.2}
+Let $d$ and $e$ be integers $>0$, $f\in S_d$, $g\in S_e$.
+There exists a canonical ring isomorphism
+\[
+  S_{(fg)}\isoto(S_{(f)})_{g^d/f^e}.
+\]
+\end{lemma}
+
+
+
+
+
 
 
 
