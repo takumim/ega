@@ -44,7 +44,7 @@ If we then replace the $\sh{I}_n$ by the $\sh{I}_n\sh{J}^n$, and, in doing so, r
 Suppose that $Y$ is \emph{locally integral}, so that the sheaf $\sh{R}(Y)$ of rational functions is a quasi-coherent $\sh{O}_Y$-algebra \sref[1]{1.7.3.7}.
 We say that a sub-$\sh{O}_Y$-module $\sh{I}$ of $\sh{R}(Y)$ is a \emph{fractional ideal} of $\sh{R}(Y)$ if it is of \emph{finite type} \sref[0]{0.5.2.1}.
 Suppose we have, for all $n\geq0$, a quasi-coherent fractional ideal $\sh{I}_n$ of $\sh{R}(Y)$, such that $\sh{I}_0 = \sh{O}_Y$, and such that condition \sref{2.8.1.1.2} (but not necessarily the second condition \sref{2.8.1.1.1}) is satisfied;
-we can then again define a quasi-coherent graded $\sh{O}_Y$-algebra by Equation~\sref{2.8.1.1.4}, and the corresponding $Y$-scheme $X = \Proj(\sh{S})$;
+we can then again define a quasi-coherent graded $\sh{O}_Y$-algebra by \sref{2.8.1.1.4}, and the corresponding $Y$-scheme $X = \Proj(\sh{S})$;
 we will again have a canonical isomorphism from $X$ to $X_{{\sh{J}}}$ for every \emph{invertible} fractional ideal $\sh{J}$ of $\sh{R}(Y)$.
 \end{env}
 
@@ -219,7 +219,7 @@ We then have, for all $n>0$, a canonical isomorphism
 \begin{proof}
 \label{proof-2.8.1.7}
 The last claim is immediate, since $\sh{O}_X(1)$ is invertible \sref{2.3.2.5} and very ample for $Y$ by definition (\sref{2.4.4.3} and \sref{2.4.4.9}).
-Also by definition, the image of $v_n$ is exactly $\sh{I}^n\sh{S}$, and \sref{2.8.1.7.1} then follows from the exactness of the functor $\widetilde{\sh{M}}$ \sref{2.3.2.4} and from Equation~\sref{2.3.2.4.1}.
+Also by definition, the image of $v_n$ is exactly $\sh{I}^n\sh{S}$, and \sref{2.8.1.7.1} then follows from the exactness of the functor $\widetilde{\sh{M}}$ \sref{2.3.2.4} and from \sref{2.3.2.4.1}.
 \end{proof}
 
 \begin{corollary}[8.1.8]
@@ -878,8 +878,8 @@ and the restriction of $p$ to $\widehat{C}_f=\Spec(S_f^\leq)$, thought of as a m
 If, further, $f\in S_1$, then $\widehat{C}_f$ is isomorphic to $X_f\otimes_{\bb{Z}}\bb{Z}[T]$ (where $T$ is an indeterminate).
 \end{env}
 
-Indeed, Equation~\sref{2.8.3.5.4} is exactly a particular case of \sref{2.2.8.1.1}, and the second claim is exactly the definition of $\Proj(\varphi)$ whenever $Y$ is affine \sref{2.2.8.1}.
-Then Equation~\sref{2.8.3.5.2} and the fact that $p$ is surjective show that the composition $\sh{S}\to\widehat{\sh{S}}\to\sh{S}$ of the canonical homomorphisms is the identity on $\sh{S}$.
+Indeed, \sref{2.8.3.5.4} is exactly a particular case of \sref{2.2.8.1.1}, and the second claim is exactly the definition of $\Proj(\varphi)$ whenever $Y$ is affine \sref{2.2.8.1}.
+Then \sref{2.8.3.5.2} and the fact that $p$ is surjective show that the composition $\sh{S}\to\widehat{\sh{S}}\to\sh{S}$ of the canonical homomorphisms is the identity on $\sh{S}$.
 Finally, the last claim of \sref{2.8.3.5.3} follows from the fact that $S_f^\leq$ is isomorphic to $S_{(f)}[T]$ whenever $f\in S_1$ \sref{2.2.2.1}.
 \end{proof}
 
@@ -2223,6 +2223,24 @@ Finally, $\sh{J}'$ is an $\sh{O}_{V'}$-module that is canonically isomorphic to 
 
 \begin{proof}
 \label{proof-2.8.10.2}
+The fact that $j'$ is a closed immersion follows from \sref[I]{1.4.3.1}, and it is an $X'$-section of $V'$ by functoriality of extension of the base prescheme.
+Furthermore, if $Z$ (resp. $Z'$) is the closed subprescheme of $V$ (resp. $V'$) associated to $j$ (resp. $j'$), then $Z'=g^{'-1}(Z)$ \sref[I]{1.4.3.1}, and the second claim then follows from \sref[I]{1.4.4.5}.
+To prove the other claims, we see, as in \sref{2.8.10.1}, that we can restrict to the case where $X$, $V$, and $X'$ (and thus also $V'$) are affine;
+we keep the notation from the proof of \sref{2.8.10.1}, and let $X'=\Spec(A')$.
+Then $V'=\Spec(B)$, where $B'\B\otimes_A A'$, and $\sh{J}'=\widetilde{\fk{J}''}$, where $\fk{J}'=\Im(\fk{J}\otimes_A A')$.
+Then $B'/\fk{J}^{'n+1}=(B/\fk{J}^{n+1})\otimes_A A'$;
+furthermore, since $\fk{J}$ is a direct factor (as an $A$-module) of $B$, $\fk{J}\otimes_A A'$ is a direct factor (as an $A'$-module) of $B'$, and is thus canonically identified with $\fk{J}'$.
+\end{proof}
+
+\begin{corollary}[8.10.3]
+\label{2.8.10.3}
+Assume that the hypotheses of Lemma~\sref{2.8.10.1} are satisfied, and assume further that $\pi$ is of finite type, and that $\sh{J}$ is an invertible $\sh{O}_V$-module.
+Then, for all $x\in X$, the local ring at the point $j(x)$ of the fibre $\pi^{-1}(x)$ is a regular (thus integral) ring of dimension 1, whose completion is isomorphic to the formal series ring $\kres(x)[[T]]$ (where $T$ is an indeterminate);
+furthermore, there exists exactly one irreducible component of $\pi^{-1}(x)$ that contains $j(x)$.
+\end{corollary}
+
+\begin{proof}
+\label{proof-2.8.10.3}
 
 \end{proof}
 
